@@ -1,0 +1,762 @@
+{
+	"Nextjs Component: Loading": {
+		"prefix": "ncloading",
+		"body": [
+			"export default function ${1:Loading}() {",
+			"  return <p>${2:Loading...}</p>",
+			"}"
+		],
+		"description": "Next.js Component for loading"
+	},
+	"Nextjs Component: Not Found": {
+		"prefix": "ncnotFound",
+		"body": [
+			"export default function ${1:NotFound}() {",
+			"  return (",
+			"    <div>",
+			"      <h2>${2:Not Found}</h2>",
+			"    </div>",
+			"  );",
+			"}"
+		],
+		"description": "Next.js Component for Not-Found"
+	},
+
+	"Nextjs Component: Error": {
+		"prefix": "ncerror",
+		"body": [
+			"'use client'",
+			"",
+			"export default function ${1:Error}({",
+			"  error,",
+			"  reset,",
+			"}: {",
+			"  error: Error & { digest?: string };",
+			"  reset: () => void;",
+			"}) {",
+			"  return (",
+			"    <div>",
+			"      Error: {error.message}",
+			"      <button onClick={() => reset()}>Try again</button>",
+			"    </div>",
+			"  );",
+			"}"
+		],
+		"description": "Next.js Component for Error"
+	},
+	"Nextjs Component: Image": {
+		"prefix": "ncimage",
+		"body": [
+			"import Image from 'next/image';",
+			"",
+			"export default function ${1:Page}() {",
+			"  return (",
+			"    <Image",
+			"      src=\"${2}\"",
+			"      width={$3}",
+			"      height={$4}",
+			"      alt=\"${5}\"",
+			"    />",
+			"  );",
+			"}"
+		],
+		"description": "Next.js Component for Image"
+	},
+	"Nextjs Component: Link": {
+		"prefix": "nclink",
+		"body": [
+			"import Link from 'next/link';",
+			"",
+			"export default function ${1:Page}() {",
+			"  return (",
+			"    <Link href=\"/${2}\">",
+			"      ${3:Link Text}",
+			"    </Link>",
+			"  );",
+			"}"
+		],
+		"description": "Next.js Component for Link"
+	},
+	"Nextjs Component: Script": {
+		"prefix": "ncscript",
+		"body": [
+			"import Script from 'next/script';",
+			"",
+			"export default function ${1:Page}() {",
+			"  return (",
+			"    <>",
+			"      <Script src=\"${2}\" />",
+			"    </>",
+			"  );",
+			"}"
+		],
+		"description": "Next.js Component for Script"
+	},
+	"Nextjs Declaration: Fetch static Data": {
+		"prefix": "ndfetchStaticData",
+		"body": [
+			"const ${1:staticData} = await fetch(`${2:https://...}`, { cache: 'force-cache' });"
+		],
+		"description": "Next.js Declaration for fetching static data"
+	},
+	"Nextjs Declaration: Fetch Dynamic Data": {
+		"prefix": "ndfetchDynamicData",
+		"body": [
+			"const ${1:dynamicData} = await fetch(`${2:https://...}`, { cache: 'no-store' });"
+		],
+		"description": "Next.js Declaration for fetching dynamic data"
+	},
+	"Nextjs Declaration: Fetch Revalidated Data": {
+		"prefix": "ndfetchRevalidatedData",
+		"body": [
+			"const ${1:revalidatedData} = await fetch(`${2:https://...}`, {",
+			"  next: { revalidate: ${3:10} },",
+			"});"
+		],
+		"description": "Next.js Declaration for fetching revalidated data"
+	},
+	"Nextjs Function: generateImageMetadata": {
+		"prefix": "nfgimageMetaData",
+		"body": [
+			"export function ${1:generateImageMetadata}({",
+			"  params,",
+			"}: {",
+			"  params: { ${2:} }",
+			"}) {",
+			"  <div>",
+			"     ${3:Content here}",
+			" </div>",
+			"}"
+		],
+		"description": "Next.js function to generate image metadata"
+	},
+	"Nextjs Function: generateStaticMetadata": {
+		"prefix": "nfgstaticMetadata",
+		"body": [
+			"import { Metadata } from 'next';",
+			"",
+			"export const metadata: Metadata = {",
+			"  title: '${1:Title}',",
+			"}"
+		],
+		"description": "Next.js function to generate Static metadata"
+	},
+	"Nextjs Function: generateDynamicMetadata": {
+		"prefix": "nfgdynamicMetaData",
+		"body": [
+			"import { Metadata } from 'next';",
+			"",
+			"export async function generateMetadata({",
+			"  params,",
+			"}: {",
+			"  params: { ${1:name}: string };",
+			"}) : Promise<Metadata> {",
+			"  return {",
+			"    title: params.${1:name},",
+			"  };",
+			"}",
+			""
+		],
+		"description": "Next.js function to generate dynamic metadata"
+	},
+	"Nextjs Function: generateStaticParams": {
+		"prefix": "nfgstaticParams",
+		"body": [
+			"export async function generateStaticParams() {",
+			"  const ${1:dataList} = await fetch('${2:https://...}').then((res) => res.json());",
+			"",
+			"  return ${1:dataList}.map((data:${3:Object}) => ({",
+			"    ${4:param}: data.${4:param},",
+			"  }));",
+			"}"
+		],
+		"description": "Next.js function to generate static params"
+	},
+	"Next.js Function: Basic": {
+		"prefix": "nf",
+		"body": ["export function ${1:functionName}() {", "  ${2}", "}"],
+		"description": "Next.js function with basic structure"
+	},
+	"Next.js Function: Default Export": {
+		"prefix": "nfdefaultExport",
+		"body": ["export default function ${1:functionName}() {", "  ${2}", "}"],
+		"description": "Next.js function with default export"
+	},
+	"Nextjs Action: Axios POST request": {
+		"prefix": "naaxiosPost",
+		"body": [
+			"import axios from \"axios\";",
+			"",
+			"export async function ${1:axiosPostFunction}(body: ${2:Object}) {",
+			"  try {",
+			"    const response = await axios.post(`${3:https://...}`, {",
+			"      body,",
+			"    });",
+			"    const { ${4:result} } = response.data;",
+			"    return ${4:result};",
+			"  } catch (error) {",
+			"    throw new Error(\"${5:Axios Post Error :(}\");",
+			"  }",
+			"}"
+		],
+		"description": "Next.js Action function for Axios POST request"
+	},
+	"Nextjs Action: Axios GET request": {
+		"prefix": "naaxiosGet",
+		"body": [
+			"import axios from \"axios\";",
+			"",
+			"export async function ${1:axiosGetFunction}() {",
+			"  try {",
+			"    const response = await axios.get(`${2:https://:...}`);",
+			"    const { ${3:result} } = response.data;",
+			"    return ${3:result};",
+			"  } catch (error: any) {",
+			"    throw new Error(\"${4:Axios Get Error :(}\");",
+			"  }",
+			"}"
+		],
+		"description": "Next.js Action function for Axios GET request"
+	},
+	"Nextjs Action: Axios PUT request": {
+		"prefix": "naaxiosPut",
+		"body": [
+			"import axios from \"axios\";",
+			"",
+			"export async function ${1:axiosPutFunction}(id: string, body: ${2:Object}) {",
+			"  try {",
+			"    const response = await axios.put(`${3:https://}`+id, {",
+			"      body,",
+			"    });",
+			"    const { ${4:result} } = response.data;",
+			"    return ${4:result};",
+			"  } catch (error: any) {",
+			"    throw new Error(\"${5:Axios Put Error :(}\");",
+			"  }",
+			"}"
+		],
+		"description": "Next.js Action function for Axios PUT request"
+	},
+	"Nextjs Action: Axios DELETE request": {
+		"prefix": "naaxiosDelete",
+		"body": [
+			"import axios from \"axios\";",
+			"",
+			"export async function ${1:axiosDeleteFunction}(id: string) {",
+			"  try {",
+			"    const response = await axios.delete(`${2:https://...}` + id);",
+			"    const { ${3:result} } = response.data;",
+			"    return ${3:result};",
+			"  } catch (error: any) {",
+			"    throw new Error(\"${4:Axios Delete Error :(}\");",
+			"  }",
+			"}"
+		],
+		"description": "Next.js Action function for Axios DELETE request"
+	},
+	"Nextjs Action: Fetch GET Request": {
+		"prefix": "nafetchGet",
+		"body": [
+			"export async function ${1:fetchGetFunction}() {",
+			"  try {",
+			"    const response = await fetch(`${2:https://:...}`, {",
+			"      method: \"GET\",",
+			"      headers: {",
+			"        \"Content-Type\": \"application/json\",",
+			"      },",
+			"    });",
+			"",
+			"    if (!response.ok) {",
+			"      throw new Error(`HTTP error! Status: ${response.status}`);",
+			"    }",
+			"",
+			"    return response.json();",
+			"  } catch (error) {",
+			"    console.error(`${3:Fetch GET error:}`, error);",
+			"    throw error;",
+			"  }",
+			"}"
+		],
+		"description": "Next.js Action function for Fetch GET request"
+	},
+	"Nextjs Action: Fetch POST Request": {
+		"prefix": "nafetchPost",
+		"body": [
+			"export async function ${1:fetchPostFunction}(body: ${2:Object}) {",
+			"  try {",
+			"    const response = await fetch(`${3:https://:...}`, {",
+			"      method: \"POST\",",
+			"      headers: {",
+			"        \"Content-Type\": \"application/json\",",
+			"      },",
+			"      body: JSON.stringify(body),",
+			"    });",
+			"",
+			"    if (!response.ok) {",
+			"      throw new Error(`HTTP error! Status: ${response.status}`);",
+			"    }",
+			"",
+			"    return response.json();",
+			"  } catch (error) {",
+			"    console.error(\"${4:Fetch POST error:}\", error);",
+			"    throw error;",
+			"  }",
+			"}"
+		],
+		"description": "Next.js Action function for Fetch POST request"
+	},
+	"Nextjs Action: Fetch PUT Request": {
+		"prefix": "nafetchPut",
+		"body": [
+			"export async function ${1:fetchPutFunction}(id: string, body: ${2:Object}) {",
+			"  try {",
+			"    const response = await fetch(`${3:https://...}` + id, {",
+			"      method: \"PUT\",",
+			"      headers: {",
+			"        \"Content-Type\": \"application/json\",",
+			"      },",
+			"      body: JSON.stringify(body),",
+			"    });",
+			"",
+			"    if (!response.ok) {",
+			"      throw new Error(`HTTP error! Status: ${response.status}`);",
+			"    }",
+			"",
+			"    return response.json();",
+			"  } catch (error) {",
+			"    console.error(\"${4:Fetch PUT error:}\", error);",
+			"    throw error;",
+			"  }",
+			"}"
+		],
+		"description": "Next.js Action function for Fetch PUT request"
+	},
+	"Nextjs Action: Fetch DELETE Request": {
+		"prefix": "nafetchDelete",
+		"body": [
+			"export async function ${1:fetchDeleteFunction}(id: string) {",
+			"  try {",
+			"    const response = await fetch(`${2:https://...}` + id, {",
+			"      method: \"DELETE\",",
+			"    });",
+			"",
+			"    if (!response.ok) {",
+			"      throw new Error(`HTTP error! Status: ${response.status}`);",
+			"    }",
+			"",
+			"    return response.json();",
+			"  } catch (error) {",
+			"    console.error(\"${3:Fetch DELETE error:}\", error);",
+			"    throw error;",
+			"  }",
+			"}"
+		],
+		"description": "Next.js Action function for Fetch DELETE request"
+	},
+	"Nextjs Import: useRouter from next/navigation": {
+		"prefix": "niuseRouter",
+		"body": ["import { useRouter } from 'next/navigation';"],
+		"description": "Next.js import of useRouter from next/navigation"
+	},
+	"Nextjs Import: cookies from next/headers": {
+		"prefix": "nicookies",
+		"body": ["import { cookies } from 'next/headers';"],
+		"description": "Next.js import of cookies from next/headers"
+	},
+	"Nextjs Import: draftMode from next/headers": {
+		"prefix": "nidraftMode",
+		"body": ["import { draftMode } from 'next/headers';"],
+		"description": "Next.js import of draftMode from next/headers"
+	},
+	"Nextjs Import: headers from next/headers": {
+		"prefix": "niheaders",
+		"body": ["import { headers } from 'next/headers';"],
+		"description": "Next.js import of headers from next/headers"
+	},
+	"Nextjs Import: ImageResponse from next/server": {
+		"prefix": "niimageResponse",
+		"body": ["import { ImageResponse } from 'next/server';"],
+		"description": "Next.js import of ImageResponse from next/server"
+	},
+	"Nextjs Import: NextResponse from next/server": {
+		"prefix": "niresponse",
+		"body": ["import { NextResponse } from 'next/server';"],
+		"description": "Next.js import of NextResponse from next/server"
+	},
+	"Nextjs Import: NextRequest from next/server": {
+		"prefix": "nirequest",
+		"body": ["import { NextRequest } from 'next/server';"],
+		"description": "Next.js import of NextRequest from next/server"
+	},
+	"Nextjs Import: notFound from next/navigation": {
+		"prefix": "ninotFound",
+		"body": ["import { notFound } from 'next/navigation';"],
+		"description": "Next.js import of notFound from next/navigation"
+	},
+	"Nextjs Import: redirect from next/navigation": {
+		"prefix": "niredirect",
+		"body": ["import { redirect } from 'next/navigation';"],
+		"description": "Next.js import of redirect from next/navigation"
+	},
+	"Nextjs Import: revalidateTag from next/cache": {
+		"prefix": "nirevalidateTag",
+		"body": ["import { revalidateTag } from 'next/cache';"],
+		"description": "Next.js import of revalidateTag from next/cache"
+	},
+	"Nextjs Import: revalidatePath from next/cache": {
+		"prefix": "nirevalidatePath",
+		"body": ["import { revalidatePath } from 'next/cache';"],
+		"description": "Next.js import of revalidatePath from next/cache"
+	},
+	"Nextjs Import: useParams from next/navigation": {
+		"prefix": "niuseParams",
+		"body": ["import { useParams } from 'next/navigation';"],
+		"description": "Next.js import of useParams from next/navigation"
+	},
+	"Nextjs Import: usePathname from next/navigation": {
+		"prefix": "niusePathname",
+		"body": ["import { usePathname } from 'next/navigation';"],
+		"description": "Next.js import of usePathname from next/navigation"
+	},
+	"Nextjs Import: useReportWebVitals from next/web-vitals": {
+		"prefix": "niuseReportWebVitals",
+		"body": ["import { useReportWebVitals } from 'next/web-vitals';"],
+		"description": "Next.js import of useReportWebVitals from next/web-vitals"
+	},
+	"Nextjs Import: useSearchParams from next/navigation": {
+		"prefix": "niuseSearchParams",
+		"body": ["import { useSearchParams } from 'next/navigation';"],
+		"description": "Next.js import of useSearchParams from next/navigation"
+	},
+	"Nextjs Import: useSelectedLayoutSegment from next/navigation": {
+		"prefix": "niuseSelectedLayoutSegment",
+		"body": ["import { useSelectedLayoutSegment } from 'next/navigation';"],
+		"description": "Next.js import of useSelectedLayoutSegment from next/navigation"
+	},
+	"Nextjs Import: useSelectedLayoutSegments from next/navigation": {
+		"prefix": "niuseSelectedLayoutSegments",
+		"body": ["import { useSelectedLayoutSegments } from 'next/navigation';"],
+		"description": "Next.js import of useSelectedLayoutSegments from next/navigation"
+	},
+	"Nextjs Route Handler: default GET() ": {
+		"prefix": "nrget",
+		"body": [
+			"import { NextResponse } from \"next/server\";\n",
+			"export async function GET() {",
+			"  try {",
+			"    const ${2:result} = await ${1:fetchData()};",
+			"    return NextResponse.json({ message: \"OK\", ${2:result} }, { status: 200 });",
+			"  } catch (error) {",
+			"    return NextResponse.json({ message: \"Error\", error }, { status: 500 });",
+			"  }",
+			"}"
+		],
+		"description": "Next.js route handler default GET method"
+	},
+	"Nextjs Route Handler: GET() with searchParams": {
+		"prefix": "nrgetSearchParams",
+		"body": [
+			"import { NextRequest, NextResponse } from \"next/server\";\n",
+			"export async function GET(request: NextRequest) {",
+			"  const ${1:id} = request.nextUrl.searchParams.get(\"${1:id}\");",
+			"  try {",
+			"    const result = await ${2:fetchData(${1:id})};",
+			"    return NextResponse.json({ message: \"OK\", result }, { status: 200 });",
+			"  } catch (error) {",
+			"    return NextResponse.json({ message: \"Error\", error }, { status: 500 });",
+			"  }",
+			"}"
+		],
+		"description": "Next.js route handler GET method with searchParams"
+	},
+	"Nextjs Route Handler: GET() with params": {
+		"prefix": "nrgetParams",
+		"body": [
+			"import { NextRequest, NextResponse } from \"next/server\";\n",
+			"export async function GET(request: NextRequest, {params}: any) {",
+			"  const ${1:id} = params.${1:id};",
+			"  try {",
+			"    const result = await ${2:fetchData(${1:id})};",
+			"    return NextResponse.json({ message: \"OK\", result }, { status: 200 });",
+			"  } catch (error) {",
+			"    return NextResponse.json({ message: \"Error\", error }, { status: 500 });",
+			"  }",
+			"}"
+		],
+		"description": "Next.js route handler GET method with params"
+	},
+	"Nextjs Route Handler: default POST()": {
+		"prefix": "nrpost",
+		"body": [
+			"import { NextRequest, NextResponse } from \"next/server\";\n",
+			"export async function POST(request: NextRequest) {",
+			"  const ${1:body} = await request.json();",
+			"  try {",
+			"    const result = await ${2:saveData(${1:body})};",
+			"    return NextResponse.json({ message: \"OK\", result }, { status: 201 });",
+			"  } catch (error) {",
+			"    return NextResponse.json({ message: \"Error\", error }, { status: 500 });",
+			"  }",
+			"}"
+		],
+		"description": "Next.js route handler default POST method"
+	},
+	"Nextjs Route Handler: default PUT()": {
+		"prefix": "nrput",
+		"body": [
+			"import { NextRequest, NextResponse } from \"next/server\";\n",
+			"export async function PUT(request: NextRequest, {params}: any) {",
+			"  const ${1:id} = params.id;",
+			"  const ${2:body} = await request.json();",
+			"  try {",
+			"    const result = await ${3:updateData(${1:id}, ${2:body})};",
+			"    return NextResponse.json({ message: \"OK\", result }, { status: 200 });",
+			"  } catch (error) {",
+			"    return NextResponse.json({ message: \"Error\", error }, { status: 500 });",
+			"  }",
+			"}"
+		],
+		"description": "Next.js route handler default PUT method"
+	},
+	"Nextjs Route Handler: default DELETE()": {
+		"prefix": "nrdelete",
+		"body": [
+			"import { NextRequest, NextResponse } from \"next/server\";\n",
+			"export async function DELETE(request: NextRequest, {params}: any) {",
+			"  const ${1:id} = params.${1:id};",
+			"  try {",
+			"    const result = await ${2:deleteData(${1:id})};",
+			"    return NextResponse.json({ message: \"OK\", result }, { status: 200 });",
+			"  } catch (error) {",
+			"    return NextResponse.json({ message: \"Error\", error }, { status: 500 });",
+			"  }",
+			"}"
+		],
+		"description": "Next.js route handler default DELETE method"
+	},
+	"Next.js Page: Fetch default (staticData)": {
+		"prefix": "npfetchStatic",
+		"body": [
+			"async function ${1:getData}() {",
+			"  const res = await fetch(\"${2:https://...}\");",
+			"",
+			"  if (!res.ok) {",
+			"    throw new Error(\"Failed to fetch data\");",
+			"  }",
+			"",
+			"  return res.json();",
+			"}",
+			"",
+			"export default async function Page() {",
+			"  const data = await ${1:getData}();",
+			"",
+			"  return <main>${3}</main>;",
+			"}"
+		],
+		"description": "Next.js Page for default fetching of data(cached data)"
+	},
+	"Next.js Page: Fetch Revalidated Data": {
+		"prefix": "npfetchRevalidate",
+		"body": [
+			"async function ${1:getData}() {",
+			"  const res = await fetch(\"${2:https://...}\", { next: { revalidate: ${3:3600} } });",
+			"",
+			"  if (!res.ok) {",
+			"    throw new Error(\"Failed to fetch data\");",
+			"  }",
+			"",
+			"  return res.json();",
+			"}",
+			"",
+			"export default async function Page() {",
+			"  const data = await ${1:getData}();",
+			"",
+			"  return <main>${4}</main>;",
+			"}"
+		],
+		"description": "Next.js Page for fetching and revalidating data"
+	},
+	"Next.js Page: Fetch Dynamic Data": {
+		"prefix": "npfetchdynamic",
+		"body": [
+			"async function ${1:getData}() {",
+			"  const res = await fetch(\"${2:https://...}\", { cache: \"no-store\" });",
+			"",
+			"  if (!res.ok) {",
+			"    throw new Error(\"Failed to fetch data\");",
+			"  }",
+			"",
+			"  return res.json();",
+			"}",
+			"",
+			"export default async function Page() {",
+			"  const data = await ${1:getData}();",
+			"",
+			"  return <main>${3}</main>;",
+			"}"
+		],
+		"description": "Next.js Page for fetching dynamic data"
+	},
+	"Next.js Page: Axios Default (staticData)": {
+		"prefix": "npaxiosStatic",
+		"body": [
+			"import axios from \"axios\";",
+			"",
+			"async function ${1:getData}() {",
+			"  try {",
+			"    const response = await axios.get(`${2:https://...}`);",
+			"    const { ${3:result} } = response.data;",
+			"    return ${3:result};",
+			"  } catch (error: any) {",
+			"    throw new Error(\"Failed to fetch data\");",
+			"  }",
+			"}",
+			"",
+			"export default async function Page() {",
+			"  const data = await ${1:getData}();",
+			"",
+			"  return <main>${4}</main>;",
+			"}"
+		],
+		"description": "Next.js Page for fetching data with Axios (cached-fetch)"
+	},
+	"Next.js Page: Axios Dynamic Data": {
+		"prefix": "npaxiosDynamic",
+		"body": [
+			"import axios from \"axios\";",
+			"",
+			"export const fetchCache = \"force-no-store\";",
+			"async function ${1:getData}() {",
+			"  try {",
+			"    const response = await axios.get(`${2:https://...}`);",
+			"    const { ${3:result} } = response.data;",
+			"    return ${3:result};",
+			"  } catch (error: any) {",
+			"    throw new Error(\"Failed to fetch data\");",
+			"  }",
+			"}",
+			"",
+			"export default async function Page() {",
+			"  const data = await ${1:getData}();",
+			"",
+			"  return <main>${4}</main>;",
+			"}"
+		],
+		"description": "Next.js Page for fetching dynamic data with Axios"
+	},
+	"Next.js Page: Axios Revalidated Data": {
+		"prefix": "npaxiosRevalidate",
+		"body": [
+			"import axios from \"axios\";",
+			"",
+			"export const revalidate = ${1:3600};",
+			"async function ${2:getData}() {",
+			"  try {",
+			"    const response = await axios.get(`${3:https://...}`);",
+			"    const { ${4:result} } = response.data;",
+			"    return ${4:result};",
+			"  } catch (error: any) {",
+			"    throw new Error(\"Failed to fetch data\");",
+			"  }",
+			"}",
+			"",
+			"export default async function Page() {",
+			"  const data = await ${2:getData}();",
+			"",
+			"  return <main>${5}</main>;",
+			"}"
+		],
+		"description": "Next.js Page for fetching revalidated data with Axios"
+	},
+	"Next.js Page with Params": {
+		"prefix": "npparams",
+		"body": [
+			"export default function Page({ params }: {",
+			"  params: { ${1:id}: string };",
+			"}) {",
+			"  const ${1:id} = params.${1:id};",
+			"  return (",
+			"    <main>",
+			"      ${2}",
+			"    </main>",
+			"  );",
+			"}"
+		],
+		"description": "Next.js Page with parameters"
+	},
+	"Next.js Page with Search Params": {
+		"prefix": "npsearchParams",
+		"body": [
+			"export default function Page({",
+			"  searchParams,",
+			"}: {",
+			"  searchParams: { ${1:id}: ${2:string} };",
+			"}) {",
+			"  const ${1:id} = searchParams.${1:id};",
+			"  return <main>${3}</main>;",
+			"}",
+			""
+		],
+		"description": "Next.js Page with search parameters"
+	},
+	"Next.js Page with Params and Search Params": {
+		"prefix": "npparamsSearchParams",
+		"body": [
+			"export default function Page({",
+			"  params,",
+			"  searchParams,",
+			"}: {",
+			"  params: { ${1:paramId}: ${2:string} };",
+			"  searchParams: { ${3:searchId}: ${4:string} };",
+			"}) {",
+			"  const ${1:paramId} = params.${1:paramId};",
+			"  const ${3:searchId} = searchParams.${3:searchId};",
+			"  return <main>${5}</main>;",
+			"}",
+			""
+		],
+		"description": "Next.js Page with params and search parameters"
+	},
+	"Next.js Page: Default": {
+		"prefix": "np",
+		"body": [
+			"export default function Page() {",
+			"  return (",
+			"    <main>",
+			"      ${1}",
+			"    </main>",
+			"  );",
+			"}"
+		],
+		"description": "Next.js Page with default structure"
+	},
+	"Next.js Page: Async Function": {
+		"prefix": "npasync",
+		"body": [
+			"async function ${1:customFunction}() {",
+			"  ${2}",
+			"}",
+			"",
+			"export default async function Page() {",
+			"  const data = await ${1:customFunction}();",
+			"  return <main>${3}</main>;",
+			"}"
+		],
+		"description": "Next.js Page with async function"
+	},
+	"Next.js Page: Layout": {
+		"prefix": "nplayout",
+		"body": [
+			"export default function ${1:Layout}({ children }: {",
+			"  children: React.ReactNode;",
+			"}) {",
+			"  return (",
+			"    <section>",
+			"      {children}",
+			"    </section>",
+			"  );",
+			"}"
+		],
+		"description": "Next.js Layout with default structure"
+	}
+}

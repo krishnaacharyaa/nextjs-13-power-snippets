@@ -1,0 +1,76 @@
+{
+	"name": "nextjs-13-power-snippets",
+	"displayName": "Next.js 13+ Power Snippets | TypeScript/Javascript",
+	"description": "Code smarter and faster in Next.js 13+ with tailored snippets in TypeScript and Javascript",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.81.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/krishnaacharyaa/nextjs-13-power-snippets.git"
+	},
+	"publisher": "krishnaacharyaa",
+	"icon": "images/logo.png",
+	"categories": [
+		"Snippets"
+	],
+	"bugs": {
+		"url": "https://github.com/krishnaacharyaa/nextjs-13-power-snippets/issues"
+	},
+	"keywords": [
+		"nextjs",
+		"nextjs13",
+		"next.js13",
+		"next.js 13+",
+		"app-router",
+		"next.js-app-router",
+		"nextjs-app-router",
+		"code-snippets",
+		"next.js",
+		"next-js",
+		"snippets",
+		"typescript",
+		"javascript",
+		"react",
+		"development",
+		"productivity",
+		"react",
+		"javascript",
+		"typescript",
+		"react development",
+		"typescript development",
+		"javascript development",
+		"coding shortcuts",
+		"typescript snippets",
+		"javascript snippets",
+		"react snippets",
+		"next.js snippets",
+		"frontend development",
+		"web development",
+		"developer tools",
+		"typescript productivity",
+		"javascript productivity",
+		"frontend productivity"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript/snippets.code-snippets"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/javascript/snippets.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/typescript/snippets.code-snippets"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/typescript/snippets.code-snippets"
+			}
+		]
+	}
+}
