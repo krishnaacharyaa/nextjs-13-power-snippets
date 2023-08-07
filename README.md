@@ -1,19 +1,19 @@
-# Next.js 13+ Power Snippets | TypeScript/JavaScript
+# **Next.js 13+ Power Snippets | TypeScript/JavaScript**
 
 Supercharge your Next.js development with a collection of powerful and time-saving code snippets specifically tailored both in TypeScript and JavaScript
 
-## Overview
+# Overview
 
 This extension offers a comprehensive collection of code snippets that cover a wide range of scenarios, allowing you to effortlessly enhance your productivity and build stunning Next.js applications.
 
-## Features
+# Features
 
 - **Effortless Usage:** Each snippet comes with an intuitive and memorable prefix, ensuring you can quickly insert the desired code.
 - **Organized Sections:** Snippets are thoughtfully grouped into categories for quick access.
 - **JavaScript & TypeScript:** Enjoy seamless compatibility with both JavaScript and TypeScript, catering to your coding preferences.
 - **Next.js 13+ Optimized:** These snippets are tailored for Next.js 13+, ensuring you have the latest and most efficient tools at your fingertips.
 
-## Snippet Categories
+# Snippet Categories
 
 | Category       | Prefix Group | Description                                                                                                                                   |
 | -------------- | :----------: | --------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -25,18 +25,20 @@ This extension offers a comprehensive collection of code snippets that cover a w
 | Imports        |   **`ni`**   | Import a wide range of Next.js modules and utilities with ease                                                                                |
 | Declarations   |   **`nd`**   | Quickly declare variables with available templates                                                                                            |
 
-## Usage
+# Usage
 
 1. Install the Next.js Code Snippets Extension in your code editor.
 2. Open a `.js|.jsx` or `.ts|.tsx` file in your Next.js project.
 3. Start typing the snippet prefix to trigger auto-suggestions.
 4. Select the desired snippet and press `Enter` to insert the code.
 
-## Handy Snippets
+# All Snippets
+## Kindly find all the supported snippets [**HERE**](./documentation/snippets.md)
+# Handy Snippets
 
-### Next.js Page - `np`
+## **Next.js Page - `np`**
 
-1. **`np`** - Next.js Page: Default
+### **`np`** - Next.js Page: Default
 
 ```tsx
 export default function Page() {
@@ -44,7 +46,7 @@ export default function Page() {
 }
 ```
 
-2. **`npasync`** - Next.js Page: Async Function
+### **`npasync`** - Next.js Page: Async Function
 
 ```tsx
 async function customFunction() {
@@ -57,7 +59,7 @@ export default async function Page() {
 }
 ```
 
-3. **`npfetchStatic`** - Next.js Page: Fetch default (staticData)
+### **`npfetchStatic`** - Next.js Page: Fetch default (staticData)
 
 ```jsx
 async function getData() {
@@ -77,9 +79,9 @@ export default async function Page() {
 }
 ```
 
-### Next.js Route Handler - `nr`
+## **Next.js Route Handler - `nr`**
 
-1. **`nrpost`** - Next.js Route Handler: Default POST Method
+### **`nrpost`** - Next.js Route Handler: Default POST Method
 
 ```tsx
 import { NextRequest, NextResponse } from "next/server";
@@ -95,7 +97,7 @@ export async function POST(request: NextRequest) {
 }
 ```
 
-2. **`nrgetSearchParams`** - Next.js Route Handler: GET() with searchParams
+### **`nrgetSearchParams`** - Next.js Route Handler: GET() with searchParams
 
 ```tsx
 import { NextRequest, NextResponse } from "next/server";
@@ -111,9 +113,9 @@ export async function GET(request: NextRequest) {
 }
 ```
 
-### Next.js Action - `na`
+## **Next.js Action - `na`**
 
-1. **`nafetchGet`** - Next.js Action: Fetch GET Request
+### **`nafetchGet`** - Next.js Action: Fetch GET Request
 
 ```tsx
 export async function fetchGetFunction() {
@@ -137,7 +139,7 @@ export async function fetchGetFunction() {
 }
 ```
 
-2. **`naaxiosGet`** - Next.js Action: Axios GET request
+### **`naaxiosGet`** - Next.js Action: Axios GET request
 
 ```tsx
 import axios from "axios";
@@ -153,9 +155,9 @@ export async function axiosGetFunction() {
 }
 ```
 
-### Next.js Function - `nf`
+## **Next.js Function - `nf`**
 
-1. **`nf`** - Next.js Function: Basic
+### **`nf`** - Next.js Function: Basic
 
 ```tsx
 export function ${1:functionName}() {
@@ -163,7 +165,7 @@ export function ${1:functionName}() {
 }
 ```
 
-2. **`nfdefaultExport`** - Next.js Function: Default Export
+### **`nfdefaultExport`** - Next.js Function: Default Export
 
 ```tsx
 export default function ${1:functionName}() {
@@ -171,7 +173,7 @@ export default function ${1:functionName}() {
 }
 ```
 
-3. **`nfgstaticParams`** - Next.js Function: generateStaticParams
+### **`nfgstaticParams`** - Next.js Function: generateStaticParams
 
 ```tsx
 export async function generateStaticParams() {
@@ -183,9 +185,9 @@ export async function generateStaticParams() {
 }
 ```
 
-### Next.js Component - `nc`
+## **Next.js Component - `nc`**
 
-1. **`ncloading`** - Next.js Component: Loading
+### **`ncloading`** - Next.js Component: Loading
 
 ```tsx
 export default function Loading() {
@@ -193,14 +195,8 @@ export default function Loading() {
 }
 ```
 
-## Snippets
+## Kindly find all the supported snippets [**HERE**](./documentation/snippets.md)
 
-Kindly find all the snippets [here](./documentation/snippets.md)
-
-## Feedback and Contributions
+# Feedback and Contributions
 
 We're dedicated to improving this extension and making it even more useful for the Next.js community. If you have found a bug, have suggestions, or want to contribute new snippets, feel free to reach out on [GitHub](https://github.com/krishnaacharyaa/nextjs-13-power-snippets).
-
----
-
-Thank you for choosing the Next.js Code Snippets Extension! Happy coding!
