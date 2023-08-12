@@ -32,8 +32,8 @@ This extension offers a comprehensive collection of code snippets that cover a w
 3. Start typing the snippet prefix to trigger auto-suggestions.
 4. Select the desired snippet and press `Enter` to insert the code.
 
-# All Snippets
-## Kindly find all the supported snippets [**HERE**](./documentation/snippets.md)
+# Kindly find All Snippets [**HERE**](./documentation/snippets.md)
+
 # Handy Snippets
 
 ## **Next.js Page - `np`**
@@ -200,3 +200,9 @@ export default function Loading() {
 # Feedback and Contributions
 
 We're dedicated to improving this extension and making it even more useful for the Next.js community. If you have found a bug, have suggestions, or want to contribute new snippets, feel free to reach out on [GitHub](https://github.com/krishnaacharyaa/nextjs-13-power-snippets).
+
+---
+
+# Liked the snippets ?
+
+Rate [here](https://marketplace.visualstudio.com/items?itemName=krishnaacharyaa.nextjs-13-power-snippets&ssr=false#review-details), and help us reach more users :)
