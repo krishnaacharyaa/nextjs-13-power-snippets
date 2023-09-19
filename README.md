@@ -2,7 +2,7 @@
 
 Supercharge your Next.js development with a collection of powerful and time-saving code snippets specifically tailored both in TypeScript and JavaScript
 
-<img src="https://github.com/krishnaacharyaa/nextjs-13-power-snippets/assets/116620586/ddb24f71-f3ca-4a14-9d69-250606e44785" width="500" />
+<img src="https://github.com/krishnaacharyaa/nextjs-13-power-snippets/assets/116620586/ddb24f71-f3ca-4a14-9d69-250606e44785" width="800" />
 
 # Overview
 
