@@ -1,5 +1,5 @@
 {
-	"Nextjs Component: Loading": {
+	"NextComponent: Loading": {
 		"prefix": "ncloading",
 		"body": [
 			"export default function ${1:Loading}() {",
@@ -8,7 +8,7 @@
 		],
 		"description": "Next.js Component for loading"
 	},
-	"Nextjs Component: Not Found": {
+	"NextComponent: Not Found": {
 		"prefix": "ncnotFound",
 		"body": [
 			"export default function ${1:NotFound}() {",
@@ -22,7 +22,7 @@
 		"description": "Next.js Component for Not-Found"
 	},
 
-	"Nextjs Component: Error": {
+	"NextComponent: Error": {
 		"prefix": "ncerror",
 		"body": [
 			"'use client'",
@@ -44,7 +44,7 @@
 		],
 		"description": "Next.js Component for Error"
 	},
-	"Nextjs Component: Image": {
+	"NextComponent: Image": {
 		"prefix": "ncimage",
 		"body": [
 			"import Image from 'next/image';",
@@ -62,7 +62,7 @@
 		],
 		"description": "Next.js Component for Image"
 	},
-	"Nextjs Component: Link": {
+	"NextComponent: Link": {
 		"prefix": "nclink",
 		"body": [
 			"import Link from 'next/link';",
@@ -77,7 +77,7 @@
 		],
 		"description": "Next.js Component for Link"
 	},
-	"Nextjs Component: Script": {
+	"NextComponent: Script": {
 		"prefix": "ncscript",
 		"body": [
 			"import Script from 'next/script';",
@@ -92,21 +92,21 @@
 		],
 		"description": "Next.js Component for Script"
 	},
-	"Nextjs Declaration: Fetch static Data": {
+	"NextDeclaration: Fetch static Data": {
 		"prefix": "ndfetchStaticData",
 		"body": [
 			"const ${1:staticData} = await fetch(`${2:https://...}`, { cache: 'force-cache' });"
 		],
 		"description": "Next.js Declaration for fetching static data"
 	},
-	"Nextjs Declaration: Fetch Dynamic Data": {
+	"NextDeclaration: Fetch Dynamic Data": {
 		"prefix": "ndfetchDynamicData",
 		"body": [
 			"const ${1:dynamicData} = await fetch(`${2:https://...}`, { cache: 'no-store' });"
 		],
 		"description": "Next.js Declaration for fetching dynamic data"
 	},
-	"Nextjs Declaration: Fetch Revalidated Data": {
+	"NextDeclaration: Fetch Revalidated Data": {
 		"prefix": "ndfetchRevalidatedData",
 		"body": [
 			"const ${1:revalidatedData} = await fetch(`${2:https://...}`, {",
@@ -115,7 +115,7 @@
 		],
 		"description": "Next.js Declaration for fetching revalidated data"
 	},
-	"Nextjs Function: generateImageMetadata": {
+	"NextFunction: generateImageMetadata": {
 		"prefix": "nfgimageMetaData",
 		"body": [
 			"export function ${1:generateImageMetadata}({",
@@ -130,12 +130,12 @@
 		],
 		"description": "Next.js function to generate image metadata"
 	},
-	"Nextjs Function: generateStaticMetadata": {
+	"NextFunction: generateStaticMetadata": {
 		"prefix": "nfgstaticMetadata",
 		"body": ["export const metadata = {", "  title: '${1:Title}',", "};"],
 		"description": "Next.js function to generate Static metadata"
 	},
-	"Nextjs Function: generateDynamicMetadata": {
+	"NextFunction: generateDynamicMetadata": {
 		"prefix": "nfgdynamicMetaData",
 		"body": [
 			"export async function generateMetadata({",
@@ -148,7 +148,7 @@
 		],
 		"description": "Next.js function to generate dynamic metadata"
 	},
-	"Nextjs Function: generateStaticParams": {
+	"NextFunction: generateStaticParams": {
 		"prefix": "nfgstaticParams",
 		"body": [
 			"export async function generateStaticParams() {",
@@ -161,17 +161,17 @@
 		],
 		"description": "Next.js function to generate static params"
 	},
-	"Next.js Function: Basic": {
+	"NextFunction: Basic": {
 		"prefix": "nf",
 		"body": ["export function ${1:functionName}() {", "  ${2}", "}"],
 		"description": "Next.js function with basic structure"
 	},
-	"Next.js Function: Default Export": {
+	"NextFunction: Default Export": {
 		"prefix": "nfdefaultExport",
 		"body": ["export default function ${1:functionName}() {", "  ${2}", "}"],
 		"description": "Next.js function with default export"
 	},
-	"Nextjs Action: Axios POST request": {
+	"NextAction: Axios POST request": {
 		"prefix": "naaxiosPost",
 		"body": [
 			"import axios from \"axios\";",
@@ -190,7 +190,7 @@
 		],
 		"description": "Next.js Action function for Axios POST request"
 	},
-	"Nextjs Action: Axios GET request": {
+	"NextAction: Axios GET request": {
 		"prefix": "naaxiosGet",
 		"body": [
 			"import axios from \"axios\";",
@@ -207,7 +207,7 @@
 		],
 		"description": "Next.js Action function for Axios GET request"
 	},
-	"Nextjs Action: Axios PUT request": {
+	"NextAction: Axios PUT request": {
 		"prefix": "naaxiosPut",
 		"body": [
 			"import axios from \"axios\";",
@@ -226,7 +226,7 @@
 		],
 		"description": "Next.js Action function for Axios PUT request"
 	},
-	"Nextjs Action: Axios DELETE request": {
+	"NextAction: Axios DELETE request": {
 		"prefix": "naaxiosDelete",
 		"body": [
 			"import axios from \"axios\";",
@@ -243,7 +243,7 @@
 		],
 		"description": "Next.js Action function for Axios DELETE request"
 	},
-	"Nextjs Action: Fetch GET Request": {
+	"NextAction: Fetch GET Request": {
 		"prefix": "nafetchGet",
 		"body": [
 			"export async function ${1:fetchGetFunction}() {",
@@ -268,7 +268,7 @@
 		],
 		"description": "Next.js Action function for Fetch GET request"
 	},
-	"Nextjs Action: Fetch POST Request": {
+	"NextAction: Fetch POST Request": {
 		"prefix": "nafetchPost",
 		"body": [
 			"export async function ${1:fetchPostFunction}(body) {",
@@ -294,7 +294,7 @@
 		],
 		"description": "Next.js Action function for Fetch POST request"
 	},
-	"Nextjs Action: Fetch PUT Request": {
+	"NextAction: Fetch PUT Request": {
 		"prefix": "nafetchPut",
 		"body": [
 			"export async function ${1:fetchPutFunction}(id, body) {",
@@ -320,7 +320,7 @@
 		],
 		"description": "Next.js Action function for Fetch PUT request"
 	},
-	"Nextjs Action: Fetch DELETE Request": {
+	"NextAction: Fetch DELETE Request": {
 		"prefix": "nafetchDelete",
 		"body": [
 			"export async function ${1:fetchDeleteFunction}(id) {",
@@ -342,96 +342,96 @@
 		],
 		"description": "Next.js Action function for Fetch DELETE request"
 	},
-	"Nextjs Import: useRouter from next/navigation": {
+	"NextImport: useRouter from next/navigation": {
 		"prefix": "niuseRouter",
 		"body": ["import { useRouter } from 'next/dist/client/router';"],
 		"description": "Next.js import of useRouter from next/navigation"
 	},
-	"Nextjs Import: cookies from next/headers": {
+	"NextImport: cookies from next/headers": {
 		"prefix": "nicookies",
 		"body": ["import { cookies } from 'next/dist/headers';"],
 		"description": "Next.js import of cookies from next/headers"
 	},
-	"Nextjs Import: draftMode from next/headers": {
+	"NextImport: draftMode from next/headers": {
 		"prefix": "nidraftMode",
 		"body": ["import { draftMode } from 'next/dist/headers';"],
 		"description": "Next.js import of draftMode from next/headers"
 	},
-	"Nextjs Import: headers from next/headers": {
+	"NextImport: headers from next/headers": {
 		"prefix": "niheaders",
 		"body": ["import { headers } from 'next/dist/headers';"],
 		"description": "Next.js import of headers from next/headers"
 	},
-	"Nextjs Import: ImageResponse from next/server": {
+	"NextImport: ImageResponse from next/server": {
 		"prefix": "niimageResponse",
 		"body": ["import { ImageResponse } from 'next/dist/server/image';"],
 		"description": "Next.js import of ImageResponse from next/server"
 	},
-	"Nextjs Import: NextResponse from next/server": {
+	"NextImport: NextResponse from next/server": {
 		"prefix": "niresponse",
 		"body": ["import { NextResponse } from 'next/dist/server';"],
 		"description": "Next.js import of NextResponse from next/server"
 	},
-	"Nextjs Import: NextRequest from next/server": {
+	"NextImport: NextRequest from next/server": {
 		"prefix": "nirequest",
 		"body": ["import { NextRequest } from 'next/dist/server';"],
 		"description": "Next.js import of NextRequest from next/server"
 	},
-	"Nextjs Import: notFound from next/navigation": {
+	"NextImport: notFound from next/navigation": {
 		"prefix": "ninotFound",
 		"body": ["import { notFound } from 'next/dist/navigation';"],
 		"description": "Next.js import of notFound from next/navigation"
 	},
-	"Nextjs Import: redirect from next/navigation": {
+	"NextImport: redirect from next/navigation": {
 		"prefix": "niredirect",
 		"body": ["import { redirect } from 'next/dist/navigation';"],
 		"description": "Next.js import of redirect from next/navigation"
 	},
-	"Nextjs Import: revalidateTag from next/cache": {
+	"NextImport: revalidateTag from next/cache": {
 		"prefix": "nirevalidateTag",
 		"body": ["import { revalidateTag } from 'next/dist/cache';"],
 		"description": "Next.js import of revalidateTag from next/cache"
 	},
-	"Nextjs Import: revalidatePath from next/cache": {
+	"NextImport: revalidatePath from next/cache": {
 		"prefix": "nirevalidatePath",
 		"body": ["import { revalidatePath } from 'next/dist/cache';"],
 		"description": "Next.js import of revalidatePath from next/cache"
 	},
-	"Nextjs Import: useParams from next/navigation": {
+	"NextImport: useParams from next/navigation": {
 		"prefix": "niuseParams",
 		"body": ["import { useParams } from 'next/dist/navigation';"],
 		"description": "Next.js import of useParams from next/navigation"
 	},
-	"Nextjs Import: usePathname from next/navigation": {
+	"NextImport: usePathname from next/navigation": {
 		"prefix": "niusePathname",
 		"body": ["import { usePathname } from 'next/dist/navigation';"],
 		"description": "Next.js import of usePathname from next/navigation"
 	},
-	"Nextjs Import: useReportWebVitals from next/web-vitals": {
+	"NextImport: useReportWebVitals from next/web-vitals": {
 		"prefix": "niuseReportWebVitals",
 		"body": ["import { useReportWebVitals } from 'next/dist/web-vitals';"],
 		"description": "Next.js import of useReportWebVitals from next/web-vitals"
 	},
-	"Nextjs Import: useSearchParams from next/navigation": {
+	"NextImport: useSearchParams from next/navigation": {
 		"prefix": "niuseSearchParams",
 		"body": ["import { useSearchParams } from 'next/dist/navigation';"],
 		"description": "Next.js import of useSearchParams from next/navigation"
 	},
-	"Nextjs Import: useSelectedLayoutSegment from next/navigation": {
+	"NextImport: useSelectedLayoutSegment from next/navigation": {
 		"prefix": "niuseSelectedLayoutSegment",
 		"body": [
 			"import { useSelectedLayoutSegment } from 'next/dist/navigation';"
 		],
 		"description": "Next.js import of useSelectedLayoutSegment from next/navigation"
 	},
-	"Nextjs Import: useSelectedLayoutSegments from next/navigation": {
+	"NextImport: useSelectedLayoutSegments from next/navigation": {
 		"prefix": "niuseSelectedLayoutSegments",
 		"body": [
 			"import { useSelectedLayoutSegments } from 'next/dist/navigation';"
 		],
 		"description": "Next.js import of useSelectedLayoutSegments from next/navigation"
 	},
-	"Nextjs Route Handler: default GET() ": {
+	"NextRoutes: default GET() ": {
 		"prefix": "nrget",
 		"body": [
 			"import { NextResponse } from \"next/server\";\n",
@@ -446,7 +446,7 @@
 		],
 		"description": "Next.js route handler default GET method"
 	},
-	"Nextjs Route Handler: GET() with searchParams": {
+	"NextRoutes: GET() with searchParams": {
 		"prefix": "nrgetSearchParams",
 		"body": [
 			"import { NextResponse } from \"next/server\";\n",
@@ -462,7 +462,7 @@
 		],
 		"description": "Next.js route handler GET method with searchParams"
 	},
-	"Nextjs Route Handler: GET() with params": {
+	"NextRoutes: GET() with params": {
 		"prefix": "nrgetParams",
 		"body": [
 			"import { NextRequest, NextResponse } from \"next/server\";\n",
@@ -478,7 +478,7 @@
 		],
 		"description": "Next.js route handler GET method with params"
 	},
-	"Nextjs Route Handler: default POST()": {
+	"NextRoutes: default POST()": {
 		"prefix": "nrpost",
 		"body": [
 			"import {  NextResponse } from \"next/server\";\n",
@@ -494,7 +494,7 @@
 		],
 		"description": "Next.js route handler default POST method"
 	},
-	"Nextjs Route Handler: default PUT()": {
+	"NextRoutes: default PUT()": {
 		"prefix": "nrput",
 		"body": [
 			"import { NextResponse } from \"next/server\";\n",
@@ -511,7 +511,7 @@
 		],
 		"description": "Next.js route handler default PUT method"
 	},
-	"Nextjs Route Handler: default DELETE()": {
+	"NextRoutes: default DELETE()": {
 		"prefix": "nrdelete",
 		"body": [
 			"import { NextResponse } from \"next/server\";\n",
@@ -527,7 +527,7 @@
 		],
 		"description": "Next.js route handler default DELETE method"
 	},
-	"Next.js Page: Fetch default (staticData)": {
+	"NextPage: Fetch default (staticData)": {
 		"prefix": "npfetchStatic",
 		"body": [
 			"async function ${1:getData}() {",
@@ -548,7 +548,7 @@
 		],
 		"description": "Next.js Page for default fetching of data(cached data)"
 	},
-	"Next.js Page: Fetch Revalidated Data": {
+	"NextPage: Fetch Revalidated Data": {
 		"prefix": "npfetchRevalidate",
 		"body": [
 			"async function ${1:getData}() {",
@@ -569,7 +569,7 @@
 		],
 		"description": "Next.js Page for fetching and revalidating data"
 	},
-	"Next.js Page: Fetch Dynamic Data": {
+	"NextPage: Fetch Dynamic Data": {
 		"prefix": "npfetchdynamic",
 		"body": [
 			"async function ${1:getData}() {",
@@ -590,7 +590,7 @@
 		],
 		"description": "Next.js Page for fetching dynamic data"
 	},
-	"Next.js Page: Axios Default (staticData)": {
+	"NextPage: Axios Default (staticData)": {
 		"prefix": "npaxiosStatic",
 		"body": [
 			"import axios from \"axios\";",
@@ -613,7 +613,7 @@
 		],
 		"description": "Next.js Page for fetching data with Axios (cached-fetch)"
 	},
-	"Next.js Page: Axios Dynamic Data": {
+	"NextPage: Axios Dynamic Data": {
 		"prefix": "npaxiosDynamic",
 		"body": [
 			"import axios from \"axios\";",
@@ -637,7 +637,7 @@
 		],
 		"description": "Next.js Page for fetching dynamic data with Axios"
 	},
-	"Next.js Page: Axios Revalidated Data": {
+	"NextPage: Axios Revalidated Data": {
 		"prefix": "npaxiosRevalidate",
 		"body": [
 			"import axios from \"axios\";",
@@ -661,7 +661,7 @@
 		],
 		"description": "Next.js Page for fetching revalidated data with Axios"
 	},
-	"Next.js Page with Params": {
+	"NextPage: with Params": {
 		"prefix": "npparams",
 		"body": [
 			"export default function Page({ params }) {",
@@ -675,7 +675,7 @@
 		],
 		"description": "Next.js Page with parameters"
 	},
-	"Next.js Page with Search Params": {
+	"NextPage: with Search Params": {
 		"prefix": "npsearchParams",
 		"body": [
 			"export default function Page({",
@@ -687,7 +687,7 @@
 		],
 		"description": "Next.js Page with search parameters"
 	},
-	"Next.js Page with Params and Search Params": {
+	"NextPage: with Params and Search Params": {
 		"prefix": "npparamsSearchParams",
 		"body": [
 			"export default function Page({",
@@ -701,7 +701,7 @@
 		],
 		"description": "Next.js Page with params and search parameters"
 	},
-	"Next.js Page: Default": {
+	"NextPage: Default": {
 		"prefix": "np",
 		"body": [
 			"export default function Page() {",
@@ -714,7 +714,7 @@
 		],
 		"description": "Next.js Page with default structure"
 	},
-	"Next.js Page: Async Function": {
+	"NextPage: Async Function": {
 		"prefix": "npasync",
 		"body": [
 			"async function customFunction() {",
@@ -728,7 +728,7 @@
 		],
 		"description": "Next.js Page with async function"
 	},
-	"Next.js Page: Layout": {
+	"NextPage: Layout": {
 		"prefix": "nplayout",
 		"body": [
 			"export default function Layout({ children }) {",
